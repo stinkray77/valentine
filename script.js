@@ -9,9 +9,8 @@ yesBtn.addEventListener("click", () => {
     clickCount++;
 
     if (clickCount >= 5) {
-        // Change the content or redirect after 5 clicks
-        question.innerHTML = "Yayyy! Finally!";
-        gif.src = "https://cdn.dribbble.com/userupload/32237563/file/original-f7f23a20ba688a63416b509924138ee9.gif"
+        // Redirect to a new page after 5 clicks
+        window.location.href = "success.html";
     } else {
         scale += 0.5;
         yesBtn.style.transform = `scale(${scale})`;
