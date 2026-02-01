@@ -19,12 +19,17 @@ yesBtn.addEventListener("click", () => {
 
 noBtn.addEventListener("mouseenter", () => {
     const noBtnRect = noBtn.getBoundingClientRect();
-    const padding = 20; // Keep button away from edges
-    
-    const randomX = padding + Math.floor(Math.random() * (window.innerWidth - noBtnRect.width - padding * 2));
-    const randomY = padding + Math.floor(Math.random() * (window.innerHeight - noBtnRect.height - padding * 2));
+    const padding = 20; 
 
-    noBtn.style.position = "absolute";
-    noBtn.style.left = randomX + "px";
-    noBtn.style.top = randomY + "px";
-})
+    // Calculate max available space
+    // Using Math.max(0, ...) ensures we don't get negative values on tiny screens
+    const maxX = window.innerWidth - noBtnRect.width - padding;
+    const maxY = window.innerHeight - noBtnRect.height - padding;
+
+    // Generate random coordinates between padding and max
+    const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
+    const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
+
+    noBtn.style.left = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
+});

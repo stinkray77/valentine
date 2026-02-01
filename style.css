@@ -49,7 +49,7 @@ button {
 
 .no-btn {
     background-color: blue;
-    /* Initial position - will be set to absolute when it runs away */
+    position: fixed; 
 }
 
 img {
