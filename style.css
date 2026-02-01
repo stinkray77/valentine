@@ -20,31 +20,36 @@ h2 {
 }
 
 .btn-group {
+    position: relative; /* Acts as a container for the buttons */
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 50px;
 }
 
 button {
-    position: absolute;
     width: 150px;
-    height: inherit;
+    height: 50px;
     color: white;
     font-size: 1.2em;
-    border: transparent;
+    border: none;
     border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth scaling */
 }
 
-button:nth-child(1) {
-    margin-left: -200px;
+.yes-btn {
     background-color: hotpink;
+    margin-right: 20px; /* Space between buttons */
+    z-index: 10; /* Keeps Yes button on top when it grows */
 }
 
-button:nth-child(2) {
-    margin-right: -200px;
+.no-btn {
     background-color: blue;
+    position: absolute; /* Only the No button needs to be absolute to 'run away' */
+    /* We'll remove the margin-right and let JS handle position */
 }
 
 image {
