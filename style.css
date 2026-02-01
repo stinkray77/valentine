@@ -10,7 +10,6 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: aliceblue;
-    overflow: hidden;
 }
 
 h2 {
@@ -21,24 +20,21 @@ h2 {
 }
 
 .btn-group {
-    position: relative; /* Acts as a container for the buttons */
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 50px;
 }
 
 button {
+    position: absolute;
     width: 150px;
-    height: 50px;
+    height: inehrit;
     color: white;
     font-size: 1.2em;
-    border: none;
+    border: transparent;
     border-radius: 30px;
-    cursor: pointer;
-    transition: transform 0.2s ease; /* Smooth scaling */
 }
 
 .yes-btn {
