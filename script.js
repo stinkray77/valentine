@@ -32,9 +32,8 @@ noBtn.addEventListener("mouseover", () => {
 
 // Falling pig jellycats animation
 function createFallingPig() {
-    const pig = document.createElement('div');
-    pig.textContent = '🐷'; // Using emoji for testing
-    pig.style.fontSize = '50px';
+    const pig = document.createElement('img');
+    pig.src = 'pig.png'; // Local image file
     pig.className = 'falling-pig';
     pig.style.left = Math.random() * 100 + 'vw';
     pig.style.animationDuration = (Math.random() * 3 + 3) + 's'; // 3-6 seconds
