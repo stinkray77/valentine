@@ -28,7 +28,6 @@ h2 {
 }
 
 button {
-    position: absolute;
     width: 150px;
     height: inehrit;
     color: white;
@@ -52,4 +51,20 @@ img {
     display: block;
     margin: auto;
     max-width: 100%;
+}
+
+.falling-pig {
+    position: fixed;
+    top: -100px;
+    width: 50px;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }

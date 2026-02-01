@@ -25,6 +25,27 @@ noBtn.addEventListener("mouseover", () => {
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
+    noBtn.style.position = "absolute";
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
 })
+
+// Falling pig jellycats animation
+function createFallingPig() {
+    const pig = document.createElement('img');
+    pig.src = 'https://www.jellycat.com/cdn/shop/files/PE6P_2.jpg?v=1694162578&width=533'; // Jellycat pig image
+    pig.className = 'falling-pig';
+    pig.style.left = Math.random() * 100 + 'vw';
+    pig.style.animationDuration = (Math.random() * 3 + 3) + 's'; // 3-6 seconds
+    pig.style.animationDelay = Math.random() * 2 + 's';
+    
+    document.body.appendChild(pig);
+    
+    // Remove pig after animation completes
+    setTimeout(() => {
+        pig.remove();
+    }, 8000);
+}
+
+// Create pigs periodically
+setInterval(createFallingPig, 500);
