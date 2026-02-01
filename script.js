@@ -17,13 +17,14 @@ yesBtn.addEventListener("click", () => {
     }
 });
 
-noBtn.addEventListener("mouseover", () => {
+noBtn.addEventListener("mouseenter", () => {
     const noBtnRect = noBtn.getBoundingClientRect();
-    const maxX = window.innerWidth - noBtnRect.width;
-    const maxY = window.innerHeight - noBtnRect.height;
+    const padding = 20; // Keep button away from edges
+    const maxX = window.innerWidth - noBtnRect.width - padding;
+    const maxY = window.innerHeight - noBtnRect.height - padding;
 
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
+    const randomX = Math.floor(Math.random() * (maxX - padding)) + padding;
+    const randomY = Math.floor(Math.random() * (maxY - padding)) + padding;
 
     noBtn.style.position = "absolute";
     noBtn.style.left = randomX + "px";
