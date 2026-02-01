@@ -48,11 +48,11 @@ button {
 
 .no-btn {
     background-color: blue;
-    position: absolute; /* Only the No button needs to be absolute to 'run away' */
-    /* We'll remove the margin-right and let JS handle position */
+    /* Initial position - will be set to absolute when it runs away */
 }
 
-image {
+img {
     display: block;
     margin: auto;
+    max-width: 100%;
 }
