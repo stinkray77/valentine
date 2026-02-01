@@ -61,6 +61,7 @@ img {
     pointer-events: none;
     z-index: 1;
     animation: fall linear infinite;
+    mix-blend-mode: multiply;
 }
 
 @keyframes fall {
